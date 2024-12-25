@@ -8,12 +8,32 @@
     <title>Buscador de canciones</title>
 </head>
 <body>
-    <label for="">Nombre de la banda: </label>
-    <input type="text" id="banda">
-    <label for="">Nombre de la cancion: </label>
-    <input type="text" id="cancion">
-    <button id="enviar">Enviar</button>
-
-    <script src="index.js" type="module"></script>
+    <div class="contenedor">
+        <div id="buscar">
+            <h1>CANCIONERO</h1>
+            <p>Ingrese banda y su canción</p>
+        </div>
+        <form action="" id="formulario-buscar">
+            <div>
+                <label for="">Nombre de la banda: </label>
+                <input type="text" id="banda">
+            </div>
+            <div>
+                <label for="">Nombre de la cancion: </label>
+                <input type="text" id="cancion">
+            </div>
+            <div class="d-flex" id="contBtn">
+                <button type="submit" id="enviar">Buscar</button>
+            </div>
+        </form>
+        
+        <div class="letra-resultado">
+            <h2></h2>
+            <div id="resultado"></div>
+        </div>
+        <div id="mensajes"></div>
+    </div>
+    
+    <script type="module" src="./js/index.js"></script>
 </body>
 </html>
