@@ -8,7 +8,14 @@ class API{
     consultarAPI(){
         console.log('desde api')
         const url = `https://api.lyrics.ovh/v1/${this.artista}/${this.cancion}`;
-        fetch(url)
+        
+
+            UI.divResultado.textContent = 'Lo siento no funciona la API';
+            UI.headingResultado.textContent = `Letra de la cancion: ${this.cancion} de ${this.artista}`;
+
+        }
+
+        /* fetch(url)
             .then( respuesta => respuesta.json())
             .then( resultado => {
                 console.log(resultado)
@@ -29,7 +36,7 @@ class API{
             })
             .catch(
                 console.log('error:')
-            )
+            ) */
     }
 }
 export default API;
